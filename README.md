@@ -1,3 +1,3 @@
 # IntegradorAndroidBored
 
-#Tolaba, Pineda, Aponte.
+#Tolaba, Pineda, Aponte
