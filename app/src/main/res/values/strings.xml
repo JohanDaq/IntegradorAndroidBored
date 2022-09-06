@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">IntegradorAndroidBored</string>
+    <string name="app_name">Bored API</string>
     <string name="main_text">Not Bored</string>
     <string name="text_participants">Participants</string>
     <string name="participants_hint">Participants</string>
     <string name="main_button">Start</string>
+    <string name="term_and_conditions_link"><u>Term and conditions</u></string>
 </resources>
