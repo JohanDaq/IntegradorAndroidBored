@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ActivityActivies::class.java))
         }
 
-        //binding.txtTerms.text = Html.fromHtml("<u>" + getString(R.string.) + "</u>")
         binding.txtTerms.setOnClickListener{binding.layoutTerms.root.visibility = View.VISIBLE}
         binding.layoutTerms.imgClose.setOnClickListener{binding.layoutTerms.root.visibility = View.GONE}
     }

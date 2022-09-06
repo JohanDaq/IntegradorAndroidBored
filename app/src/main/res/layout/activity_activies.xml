@@ -7,21 +7,41 @@
     android:background="@color/blue_background_ap"
     tools:context=".Model.ActivityActivies">
 
-    <TextView
-        android:id="@+id/txt_toolbar"
+    <LinearLayout
+        android:id="@+id/header_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/blue"
-        android:gravity="center"
-        android:padding="25dp"
-        android:text="Activities"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        app:drawableEndCompat="@drawable/ic_random"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:drawableTint="@color/white" />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:padding="25dp"
+            android:paddingStart="50dp"
+            android:text="@string/categories"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageButton
+            android:id="@+id/imgRandom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/blue"
+            android:contentDescription="@string/des_back_btn"
+            android:src="@drawable/ic_random"
+            app:tint="@color/white" />
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listView"
@@ -30,6 +50,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_toolbar" />
+        app:layout_constraintTop_toBottomOf="@id/header_activity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.integradorandroidbored.Model
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
@@ -12,8 +13,6 @@ class ActivityActivies : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_activies)
-
         binding = ActivityActiviesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -23,7 +22,16 @@ class ActivityActivies : AppCompatActivity() {
         binding.listView.adapter = arrayAdapter
         binding.listView.setOnItemClickListener{ parent, view, position, id ->
             val element = arrayAdapter.getItem(position)
-            Toast.makeText(this, element, Toast.LENGTH_SHORT).show()
+            val intent = Intent(this,SuggestionPage::class.java)
+            intent.putExtra("Activity",element)
+            startActivity(intent)
+        }
+
+        binding.imgRandom.setOnClickListener {
+            val intentRandom = Intent(this,SuggestionPage::class.java)
+            intentRandom.putExtra("Activity","Random")
+
+            startActivity(intentRandom)
         }
 
     }
