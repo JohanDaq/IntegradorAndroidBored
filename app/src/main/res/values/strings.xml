@@ -11,4 +11,5 @@
     <string name="des_back_btn">Person Icon</string>
     <string name="lbl_price">Price</string>
     <string name="categories">Activity</string>
+    <string name="error_message_participants">Enter a number from 1 to 8</string>
 </resources>
