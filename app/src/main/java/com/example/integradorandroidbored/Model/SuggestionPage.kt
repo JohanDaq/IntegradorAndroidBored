@@ -23,7 +23,7 @@ class SuggestionPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySuggestionPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val title = intent.getStringExtra("Activity")
+        val response: BoredResponse = intent.getSerializableExtra("response") as BoredResponse
         binding.txtToolbar.setText(title.toString())
 
         binding.imgClose.setOnClickListener { finish() }
@@ -32,16 +32,18 @@ class SuggestionPage : AppCompatActivity() {
             binding.lblCategory.visibility = View.VISIBLE
         }
 
-        val price = 0.6
-        val textPrice: String = when{
-            price == 0.0 -> getString(R.string.free_price)
-            price < 0.3 -> getString(R.string.low_price)
-            0.3 <= price && price < 0.6 -> getString(R.string.med_price)
-            price >= 0.6 -> getString(R.string.high_price)
-            else -> "Priceless"
-        }
+        binding.activityName.text = response.activity
 
-        binding.lblPrice.setText(textPrice)
+//        val price = response.price?.toDouble()
+//        val textPrice: String = when{
+//            price == 0.0 -> getString(R.string.free_price)
+//            price!! < 0.3 -> getString(R.string.low_price)
+//            0.3 <= price && price < 0.6 -> getString(R.string.med_price)
+//            price >= 0.6 -> getString(R.string.high_price)
+//            else -> "Priceless"
+//        }
+
+        //binding.lblPrice.setText(textPrice)
 
     }
 }

@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkAmountParticipant() : Boolean {
         val participants = binding.participantsAmount.text
-        return participants.isNotBlank() && participants.contains(regex)
+        return participants.isBlank() || participants.contains(regex)
     }
 
     private fun setMessageError(option: Boolean) {
