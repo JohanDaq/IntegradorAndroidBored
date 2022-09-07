@@ -28,6 +28,11 @@ class SuggestionPage : AppCompatActivity() {
 
         binding.imgClose.setOnClickListener { finish() }
 
+        val hola: BoredResponse = intent.getSerializableExtra("response") as BoredResponse
+        val hola2 = intent.getStringExtra("random")
+
+        hola2?.let { binding.txtToolbar.setText(hola2) } ?: binding.txtToolbar.setText(hola.activity)
+
         if(title.toString() == "Random"){
             binding.lblCategory.visibility = View.VISIBLE
         }

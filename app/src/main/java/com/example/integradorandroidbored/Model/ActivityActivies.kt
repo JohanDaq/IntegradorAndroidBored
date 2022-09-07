@@ -16,6 +16,7 @@ import java.util.*
 
 class ActivityActivies : AppCompatActivity() {
     private lateinit var binding: ActivityActiviesBinding
+    private var flagRandom = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,9 +39,7 @@ class ActivityActivies : AppCompatActivity() {
 
         binding.imgRandom.setOnClickListener {
             searchByParticipants(numberarticipants.toString(),"")
-            val intentRandom = Intent(this,SuggestionPage::class.java)
-            intentRandom.putExtra("Activity","Random")
-            startActivity(intentRandom)
+            flagRandom = true
         }
 
     }
@@ -53,24 +52,15 @@ class ActivityActivies : AppCompatActivity() {
             else
                 Connection.getApiConexion().create(Apiservice::class.java).getActivitiesByParticipantsAndType(category,participants)
             val activities = call.body()
+
             runOnUiThread {
                 if (call.isSuccessful)
                     if (activities != null) {
-                        Log.i("TAG",activities.activity.toString())
-                        Log.i("TAG",activities.price.toString())
-                        Log.i("TAG",activities.participants.toString())
-                        Log.i("TAG",activities.type.toString())
-                        Log.i("TAG",activities.toString())
-
-                        Toast.makeText(this@ActivityActivies,activities.participants.toString(), Toast.LENGTH_LONG).show()
                         val intent = Intent(this@ActivityActivies,SuggestionPage::class.java)
-                        val response = BoredResponse(
-                            activities.activity,
-                            activities.type,
-                            activities.participants,
-                            activities.price
-                        )
-                        intent.putExtra("response", response)
+                        intent.putExtra("response", activities)
+                        Log.i("tag",activities.toString())
+                        if (flagRandom)
+                            intent.putExtra("random","random")
                         startActivity(intent)
                     }
                     else{
