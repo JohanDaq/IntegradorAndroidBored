@@ -127,17 +127,19 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/lbl_price"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                android:text="Medium"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 tools:text="Medium" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lbl_category"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
@@ -157,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="2"
-                android:text="2"
+                android:text="Relaxation"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"

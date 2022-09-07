@@ -11,4 +11,8 @@
     <string name="des_back_btn">Person Icon</string>
     <string name="lbl_price">Price</string>
     <string name="categories">Activity</string>
+    <string name="free_price">Free</string>
+    <string name="low_price">Low</string>
+    <string name="med_price">Medium</string>
+    <string name="high_price">High</string>
 </resources>

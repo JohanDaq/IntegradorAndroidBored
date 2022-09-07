@@ -2,6 +2,7 @@ package com.example.integradorandroidbored.Model
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -30,7 +31,6 @@ class ActivityActivies : AppCompatActivity() {
         binding.imgRandom.setOnClickListener {
             val intentRandom = Intent(this,SuggestionPage::class.java)
             intentRandom.putExtra("Activity","Random")
-
             startActivity(intentRandom)
         }
 
