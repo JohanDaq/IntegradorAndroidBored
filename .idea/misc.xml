@@ -3,13 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/ic_arrow_right.xml" value="0.334" />
-        <entry key="app/src/main/res/drawable/style_button_start.xml" value="0.338" />
-        <entry key="app/src/main/res/layout/activity_activies.xml" value="0.33177083333333335" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2554517133956386" />
-        <entry key="app/src/main/res/layout/activity_suggestion_page.xml" value="0.33177083333333335" />
-        <entry key="app/src/main/res/layout/item.xml" value="0.1828774062816616" />
-        <entry key="app/src/main/res/layout/terms_and_conditions.xml" value="0.33177083333333335" />
+        <entry key="app/src/main/res/drawable/style_button_start.xml" value="0.299" />
+        <entry key="app/src/main/res/drawable/style_textview_activies.xml" value="0.299" />
+        <entry key="app/src/main/res/drawable/styles_button.xml" value="0.299" />
+        <entry key="app/src/main/res/layout/activity_activies.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_clase2.xml" value="0.1734375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/item.xml" value="0.2427536231884058" />
+        <entry key="app/src/main/res/layout/terms_and_conditions.xml" value="0.25" />
       </map>
     </option>
   </component>
@@ -22,7 +23,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.33177083333333335" />
+        <option name="scale" value="0.29936594202898553" />
       </ProjectState>
     </option>
   </component>

@@ -15,4 +15,5 @@
     <string name="low_price">Low</string>
     <string name="med_price">Medium</string>
     <string name="high_price">High</string>
+    <string name="error_message_participants">Enter a number from 1 to 8</string>
 </resources>
