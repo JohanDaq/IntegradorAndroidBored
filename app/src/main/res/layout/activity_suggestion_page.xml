@@ -22,7 +22,7 @@
             android:backgroundTint="@color/blue"
             android:contentDescription="@string/des_back_btn"
             android:src="@drawable/ic_arrow_back"
-            app:tint="@color/black" />
+            app:tint="@color/white" />
 
         <TextView
             android:id="@+id/txt_toolbar"
@@ -34,7 +34,7 @@
             android:padding="25dp"
             android:paddingEnd="60dp"
             android:text=""
-            android:textColor="@color/blue_dark"
+            android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"

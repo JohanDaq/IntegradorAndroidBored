@@ -5,9 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.telecom.Call
+import android.widget.Toast
+import com.example.integradorandroidbored.Interfaces.Apiservice
 import com.example.integradorandroidbored.R
 import com.example.integradorandroidbored.databinding.ActivityMainBinding
 import com.example.integradorandroidbored.databinding.ActivitySuggestionPageBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class SuggestionPage : AppCompatActivity() {
 

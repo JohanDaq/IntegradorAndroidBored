@@ -2,6 +2,7 @@ package com.example.integradorandroidbored.Model
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.integradorandroidbored.databinding.ActivityMainBinding
@@ -18,7 +19,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.mainButton.setOnClickListener {
             val check = checkAmountParticipant()
-            if (check) { startActivity(Intent(this, ActivityActivies::class.java)) }
+            var prueba: String = binding.participantsAmount.text.toString()
+            Log.d("NUMERO", ""+prueba)
+            if (check) {
+                val intentActivies = Intent(this,ActivityActivies::class.java)
+                intentActivies.putExtra("participants",prueba)
+                startActivity(intentActivies)
+            }
             setMessageError(check)
         }
 
@@ -32,9 +39,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setMessageError(option: Boolean) {
-        val currentVisibility = binding.errorMessage.visibility
         binding.errorMessage.visibility =
-            if (option && currentVisibility == View.VISIBLE) View.INVISIBLE else View.VISIBLE
+            if (option) View.INVISIBLE else View.VISIBLE
     }
 }
 
