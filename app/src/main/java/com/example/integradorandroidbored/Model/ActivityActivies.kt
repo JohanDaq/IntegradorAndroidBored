@@ -38,19 +38,27 @@ class ActivityActivies : AppCompatActivity() {
         }
 
         binding.imgRandom.setOnClickListener {
-            searchByParticipants(numberarticipants.toString(),"")
+            searchByParticipants(numberarticipants.toString())
             flagRandom = true
         }
 
     }
 
     //con corrutinas
-    private fun searchByParticipants(participants: String,category: String){
+    private fun searchByParticipants(participants: String, category: String? = null){
         CoroutineScope(Dispatchers.IO).launch {
-            val call = if (category.isNullOrEmpty())
+          /*  val call = if (category.isNullOrEmpty())
                 Connection.getApiConexion().create(Apiservice::class.java).getActivitiesByParticipants(participants)
             else
                 Connection.getApiConexion().create(Apiservice::class.java).getActivitiesByParticipantsAndType(category,participants)
+*/
+
+            val data: MutableMap<String, String> = HashMap()
+            category?.let { data["type"] = category }
+            if (participants.isNotBlank()) data["participants"] = participants
+
+            val call = Connection.getApiConexion().create(Apiservice::class.java).getBoredResponse(data)
+
             val activities = call.body()
 
             runOnUiThread {
