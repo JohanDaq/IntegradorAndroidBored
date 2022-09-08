@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.mainButton.setOnClickListener {
             val check = checkAmountParticipant()
-            if (check) {
+            if (check && binding.checkBox.isChecked) {
                 val numberParticipants: String = binding.participantsAmount.text.toString()
                 val intentActivies = Intent(this,ActivityActivies::class.java).apply { putExtra("participants",numberParticipants) }
                 startActivity(intentActivies)
