@@ -92,6 +92,7 @@
                 tools:text="Participants" />
 
             <TextView
+                android:id="@+id/lbl_participants"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -156,6 +157,7 @@
                 android:src="@drawable/ic_format_list" />
 
             <TextView
+                android:id="@+id/text_category"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"

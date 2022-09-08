@@ -15,6 +15,7 @@ import com.example.integradorandroidbored.databinding.ActivitySuggestionPageBind
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.*
 
 class SuggestionPage : AppCompatActivity() {
 
@@ -27,36 +28,45 @@ class SuggestionPage : AppCompatActivity() {
         val response: BoredResponse = intent.getSerializableExtra("response") as BoredResponse
         binding.txtToolbar.setText(title.toString())
 
+        showResponse(response, true)
+
         binding.imgClose.setOnClickListener { finish() }
 
-        val hola: BoredResponse = intent.getSerializableExtra("response") as BoredResponse
-        val hola2 = intent.getStringExtra("random")
 
-        hola2?.let { binding.txtToolbar.setText(hola2) } ?: binding.txtToolbar.setText(hola.activity)
 
-        if(title.toString() == "Random"){
-            binding.lblCategory.visibility = View.VISIBLE
-        }
 
-        binding.activityName.text = response.activity
-
-//        val price = response.price?.toDouble()
-//        val textPrice: String = when{
-//            price == 0.0 -> getString(R.string.free_price)
-//            price!! < 0.3 -> getString(R.string.low_price)
-//            0.3 <= price && price < 0.6 -> getString(R.string.med_price)
-//            price >= 0.6 -> getString(R.string.high_price)
-//            else -> "Priceless"
-//        }
-
-        //binding.lblPrice.setText(textPrice)
     }
 
     private fun showResponse(response: BoredResponse, random: Boolean) {
-        //TODO mostrar la informacion
+        val title = intent.getStringExtra("random")
+        title?.let { binding.txtToolbar.setText(title) }
+            ?: binding.txtToolbar.setText(response.type)
+        binding.lblPrice.text = response.price
+        binding.lblParticipants.text = response.participants.toString()
+        binding.activityName.text = response.activity
+
+        if (title.toString() == "Random") {
+            binding.lblCategory.visibility = View.VISIBLE
+        }
+
+
+        val price = response.price?.toDouble()
+        val textPrice: String = when {
+            price == 0.0 -> getString(R.string.free_price)
+            price!! < 0.3 -> getString(R.string.low_price)
+            0.3 <= price && price < 0.6 -> getString(R.string.med_price)
+            price >= 0.6 -> getString(R.string.high_price)
+            else -> "Priceless"
+        }
+
+        binding.lblPrice.text = textPrice
 
         binding.layoutContent.visibility = View.VISIBLE
         binding.message.visibility = View.GONE
+        if(random){
+            binding.lblCategory.visibility = View.VISIBLE
+            binding.textCategory.text = response.type
+        }
     }
 
     private fun showErrorMessage(){
