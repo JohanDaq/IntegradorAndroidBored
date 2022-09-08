@@ -10,10 +10,12 @@
     <string name="try_another">Try another</string>
     <string name="des_back_btn">Person Icon</string>
     <string name="lbl_price">Price</string>
-    <string name="categories">Activity</string>
+    <string name="categories">Activities</string>
     <string name="free_price">Free</string>
     <string name="low_price">Low</string>
     <string name="med_price">Medium</string>
     <string name="high_price">High</string>
+    <string name="activity">Activity</string>
     <string name="error_message_participants">Enter a number from 1 to 8</string>
+    <string name="error_message_suggestion_page">No activity found with the specified parameters</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.integradorandroidbored.Model
 
 import android.content.Intent
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -49,6 +50,19 @@ class SuggestionPage : AppCompatActivity() {
 //        }
 
         //binding.lblPrice.setText(textPrice)
+    }
 
+    private fun showResponse(response: BoredResponse, random: Boolean) {
+        //TODO mostrar la informacion
+
+        binding.layoutContent.visibility = View.VISIBLE
+        binding.message.visibility = View.GONE
+    }
+
+    private fun showErrorMessage(){
+        binding.txtToolbar.text = getString(R.string.activity)
+
+        binding.layoutContent.visibility = View.GONE
+        binding.message.visibility = View.VISIBLE
     }
 }
