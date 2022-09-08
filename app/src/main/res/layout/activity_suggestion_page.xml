@@ -165,6 +165,7 @@
                 android:text="Relaxation"
                 android:textColor="@color/black"
                 android:textSize="20sp"
+                android:paddingStart="3dp"
                 android:textStyle="bold"
                 tools:text="Relaxation" />
 
