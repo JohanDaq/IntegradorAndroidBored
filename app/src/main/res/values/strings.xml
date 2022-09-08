@@ -18,4 +18,18 @@
     <string name="activity">Activity</string>
     <string name="error_message_participants">Enter a number from 1 to 8</string>
     <string name="error_message_suggestion_page">No activity found with the specified parameters</string>
+
+<string-array name="categories">
+    <item>Education</item>
+    <item>Recreational</item>
+    <item>Social</item>
+    <item>Diy</item>
+    <item>Charity</item>
+    <item>Cooking</item>
+    <item>Relaxation</item>
+    <item>Music</item>
+    <item>Busywork</item>
+</string-array>
 </resources>
+
+

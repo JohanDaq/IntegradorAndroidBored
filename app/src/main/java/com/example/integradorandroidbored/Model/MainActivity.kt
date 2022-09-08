@@ -2,7 +2,6 @@ package com.example.integradorandroidbored.Model
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.integradorandroidbored.databinding.ActivityMainBinding
@@ -19,16 +18,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.mainButton.setOnClickListener {
             val check = checkAmountParticipant()
-            var prueba: String = binding.participantsAmount.text.toString()
-            Log.d("NUMERO", ""+prueba)
             if (check) {
-                val intentActivies = Intent(this,ActivityActivies::class.java)
-                intentActivies.putExtra("participants",prueba)
+                val numberParticipants: String = binding.participantsAmount.text.toString()
+                val intentActivies = Intent(this,ActivityActivies::class.java).apply { putExtra("participants",numberParticipants) }
                 startActivity(intentActivies)
             }
             setMessageError(check)
         }
-
         binding.txtTerms.setOnClickListener{binding.layoutTerms.root.visibility = View.VISIBLE}
         binding.layoutTerms.imgClose.setOnClickListener{binding.layoutTerms.root.visibility = View.GONE}
     }
