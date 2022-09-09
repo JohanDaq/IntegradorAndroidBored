@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/IntegradorAndroidBored/app/src/main/res/drawable/styles_button.xml" value="0.322" />
+        <entry key="..\:/AndroidStudioProjects/IntegradorAndroidBored/app/src/main/res/layout/activity_activies.xml" value="0.19166666666666668" />
+        <entry key="..\:/AndroidStudioProjects/IntegradorAndroidBored/app/src/main/res/layout/activity_main.xml" value="0.19166666666666668" />
+        <entry key="..\:/AndroidStudioProjects/IntegradorAndroidBored/app/src/main/res/layout/item.xml" value="0.19166666666666668" />
         <entry key="app/src/main/res/drawable/style_button_start.xml" value="0.299" />
         <entry key="app/src/main/res/drawable/style_textview_activies.xml" value="0.299" />
         <entry key="app/src/main/res/drawable/styles_button.xml" value="0.299" />
         <entry key="app/src/main/res/layout/activity_activies.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_clase2.xml" value="0.1734375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/activity_suggestion_page.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/item.xml" value="0.2427536231884058" />
         <entry key="app/src/main/res/layout/terms_and_conditions.xml" value="0.25" />
       </map>

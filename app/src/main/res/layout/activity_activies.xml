@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_background_ap"
-    tools:context=".Model.ActivityActivies">
+    tools:context=".Model.ActivityActivities">
 
     <LinearLayout
         android:id="@+id/header_activity"

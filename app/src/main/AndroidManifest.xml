@@ -20,7 +20,7 @@
             android:name=".Model.SuggestionPage"
             android:exported="false" />
         <activity
-            android:name=".Model.ActivityActivies"
+            android:name=".Model.ActivityActivities"
             android:exported="false" />
         <activity
             android:name=".Model.MainActivity"

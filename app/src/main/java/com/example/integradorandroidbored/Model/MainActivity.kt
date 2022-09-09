@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
             val check = checkAmountParticipant()
             if (check && binding.checkBox.isChecked) {
                 val numberParticipants: String = binding.participantsAmount.text.toString()
-                val intentActivies = Intent(this,ActivityActivies::class.java).apply { putExtra("participants",numberParticipants) }
-                startActivity(intentActivies)
+                val intentActivities = Intent(this,ActivityActivities::class.java).apply { putExtra("participants",numberParticipants) }
+                startActivity(intentActivities)
             }
             setMessageError(check)
         }
@@ -29,11 +29,21 @@ class MainActivity : AppCompatActivity() {
         binding.layoutTerms.imgClose.setOnClickListener{binding.layoutTerms.root.visibility = View.GONE}
     }
 
+    /**
+     * Validates that the participants number is in range 1 to 8 or it is empty
+     * @return [Boolean]
+     * @author Aponte, Pineda & Tolaba
+     */
     private fun checkAmountParticipant() : Boolean {
         val participants = binding.participantsAmount.text
         return participants.isBlank() || participants.contains(regex)
     }
 
+    /**
+     * Shows a error message when the participants condition is false
+     * @param option [Boolean] participants condition
+     * @author Aponte, Pineda & Tolaba
+     */
     private fun setMessageError(option: Boolean) {
         binding.errorMessage.visibility =
             if (option) View.INVISIBLE else View.VISIBLE

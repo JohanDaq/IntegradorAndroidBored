@@ -9,7 +9,7 @@ import com.example.integradorandroidbored.R
 import com.example.integradorandroidbored.databinding.ActivityActiviesBinding
 
 
-class ActivityActivies : AppCompatActivity() {
+class ActivityActivities : AppCompatActivity() {
     private lateinit var binding: ActivityActiviesBinding
     private lateinit var participants: String
 
@@ -26,7 +26,7 @@ class ActivityActivies : AppCompatActivity() {
         binding.listView.setOnItemClickListener { _, _, position, _ ->
             val element = arrayAdapter.getItem(position)
             goActivity(
-                this@ActivityActivies,
+                this@ActivityActivities,
                 SuggestionPage::class.java,
                 element.toString().lowercase(),
                 participants
@@ -34,7 +34,7 @@ class ActivityActivies : AppCompatActivity() {
         }
         binding.imgRandom.setOnClickListener {
             goActivity(
-                this@ActivityActivies,
+                this@ActivityActivities,
                 SuggestionPage::class.java,
                 "",
                 participants
@@ -42,15 +42,22 @@ class ActivityActivies : AppCompatActivity() {
         }
     }
 
+    /**
+     * Launches the next activity screen carrying the participants [String] data
+     * @param activity [Activity] context, starting activity
+     * @param cls [Class] screen to navigate to
+     * @param typeActivity [String] recreational activity category
+     * @author Aponte, Pineda & Tolaba
+     */
     private fun goActivity(
         activity: Activity,
         cls: Class<*>?,
-        tyeActivity: String? = null,
+        typeActivity: String? = null,
         participants: String
     ) {
         val intent = Intent()
         intent.setClass(activity, cls!!).apply {
-            putExtra("tyeActivity", tyeActivity)
+            putExtra("tyeActivity", typeActivity)
             putExtra("participants", participants)
         }
         activity.startActivity(intent)
