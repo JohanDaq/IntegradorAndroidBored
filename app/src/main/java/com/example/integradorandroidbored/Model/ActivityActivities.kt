@@ -11,7 +11,7 @@ import com.example.integradorandroidbored.databinding.ActivityActiviesBinding
 
 class ActivityActivities : AppCompatActivity() {
     private lateinit var binding: ActivityActiviesBinding
-    private lateinit var participants: String
+    private var participants: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,12 +51,12 @@ class ActivityActivities : AppCompatActivity() {
      */
     private fun goActivity(
         activity: Activity,
-        cls: Class<*>?,
-        typeActivity: String? = null,
+        cls: Class<*>,
+        typeActivity: String,
         participants: String
     ) {
         val intent = Intent()
-        intent.setClass(activity, cls!!).apply {
+        intent.setClass(activity, cls).apply {
             putExtra("tyeActivity", typeActivity)
             putExtra("participants", participants)
         }

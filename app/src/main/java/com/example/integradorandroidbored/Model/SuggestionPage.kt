@@ -16,8 +16,8 @@ import java.util.HashMap
 class SuggestionPage : AppCompatActivity() {
 
     private lateinit var binding: ActivitySuggestionPageBinding
-    private lateinit var category: String
-    private lateinit var numberParticipants: String
+    private var category: String = ""
+    private var numberParticipants: String = ""
     private var randomBoolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
